@@ -1,0 +1,27 @@
+# --- General Python / Virtual Environments ---
+# Ignore the local virtual environment folder
+/vigeye_env
+__pycache__/
+*.pyc
+
+# --- Jupyter Notebook Artifacts ---
+# Ignore files created by notebooks and VS Code
+.ipynb_checkpoints
+
+# --- ML Data, Models, and Logging ---
+# 1. RAW DATA (Very Large Video Files)
+# This prevents the RWF-2000 and custom videos from being uploaded.
+/data/raw/
+/data/processed/
+
+# 2. MODEL WEIGHTS (Large Binary Files)
+# These are generated during training and are too big for GitHub.
+*.pt
+*.pth
+*.onnx
+
+# 3. RUNTIME AND LOGS
+# Folders created when YOLO runs predictions or training.
+/runs/
+/logs/
+/experiments/*.json
