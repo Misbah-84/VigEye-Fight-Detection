@@ -42,6 +42,8 @@ Clone the repository and install the required dependencies:
 
 ```bash
 git clone [https://github.com/Misbah-84/VigEye-Fight-Detection.git](https://github.com/Misbah-84/VigEye-Fight-Detection.git)
+
+
 cd VigEye-Fight-Detection
 pip install -r requirements.txt
 2. Model Weights
