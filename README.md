@@ -46,7 +46,9 @@ git clone [https://github.com/Misbah-84/VigEye-Fight-Detection.git](https://gith
 
 cd VigEye-Fight-Detection
 pip install -r requirements.txt
-2. Model Weights
+
+
+2. **Model Weights***
 Place your trained deep learning weights (.pt, .onnx, or .h5 files) inside the weights/ directory:
 
 weights/fight_detection_model.pt
