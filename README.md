@@ -13,3 +13,52 @@ VigEye is a multi-tasking, deep-learning-based intelligent surveillance framewor
 ---
 
 ## 🏗️ System Architecture
+[ CCTV Video Input / RTSP Stream ]
+│
+▼
+[ Frame Preprocessing Layer ]
+│
+┌────────┼────────┐
+▼        ▼        ▼
+[Fight]   [Weapon] [Smoke]
+(LSTM/3D)  (YOLO)   (CNN)
+│        │        │
+└────────┼────────┘
+▼
+[ Alert & Logic Aggregator ] ──> [ Live UI Overlay / Telegram API / Webhook ]
+
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+*   Python 3.8 or higher
+*   NVIDIA GPU + CUDA Toolkit (Highly Recommended for real-time FPS)
+
+### 1. Installation
+
+Clone the repository and install the required dependencies:
+
+```bash
+git clone [https://github.com/Misbah-84/VigEye-Fight-Detection.git](https://github.com/Misbah-84/VigEye-Fight-Detection.git)
+cd VigEye-Fight-Detection
+pip install -r requirements.txt
+2. Model Weights
+Place your trained deep learning weights (.pt, .onnx, or .h5 files) inside the weights/ directory:
+
+weights/fight_detection_model.pt
+
+weights/weapon_detection_model.pt
+
+weights/smoke_detection_model.pt
+
+💻 Usage
+Run the main inference pipeline on a local video file, a live webcam feed, or an IP Camera RTSP stream.
+
+Run on a Video File
+Bash
+python main.py --source data/test_video.mp4 --conf 0.5
+Run on Live Webcam Feed
+Bash
+python main.py --source 0 --show-preview
